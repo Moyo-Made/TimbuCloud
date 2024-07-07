@@ -52,7 +52,10 @@ const Navbar: React.FC = () => {
 				</div>
 
 				<div className="flex items-center">
-					<div className="hidden md:flex gap-2 ml-2 w-[178px] h-[35px] bg-[#08319C] text-[#FFFFFF] justify-center items-center">
+					<div
+						className="hidden md:flex gap-2 ml-2 w-[178px] h-[35px] bg-[#08319C] text-[#FFFFFF] 
+						justify-center items-center rounded-md"
+					>
 						<button className="uppercase">Shopping Cart</button>
 						<ShoppingCart />
 					</div>
