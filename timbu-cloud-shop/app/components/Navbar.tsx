@@ -6,6 +6,7 @@ import Logo from "@/public/logo.png";
 import { X } from "lucide-react";
 import { ShoppingCart } from "lucide-react";
 import { NavLink, navLinks } from "../navLinks";
+import Link from "next/link";
 
 const Navbar: React.FC = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,22 +46,28 @@ const Navbar: React.FC = () => {
 			</div>
 
 			<div className="flex items-center gap-4">
-				<div className="hidden md:flex uppercase gap-10 text-[#000000] text-[15px]">
+				<div className="hidden md:flex uppercase gap-10 text-[#000000] text-[15px] list-none">
 					{navLinks.map((link: NavLink, index: number) => (
-						<p key={index}>{link.name}</p>
+						<Link key={index} href={link.id}>
+							<li className="hover:font-bold">{link.name}</li>
+						</Link>
 					))}
 				</div>
 
 				<div className="flex items-center">
 					<div
-						className="hidden md:flex gap-2 ml-2 w-[178px] h-[35px] bg-[#08319C] text-[#FFFFFF] 
+						className="hidden md:flex gap-2 ml-2 w-[200px] h-[35px] bg-[#08319C] text-[#FFFFFF] 
 						justify-center items-center rounded-md"
 					>
-						<button className="uppercase">Shopping Cart</button>
+						<Link href="/cart">
+							<button className="uppercase">Shopping Cart</button>
+						</Link>
 						<ShoppingCart />
 					</div>
-					<ShoppingCart className="block md:hidden text-[#08319C]" />
 
+					<Link href="/cart">
+						<ShoppingCart className="flex md:hidden text-[#08319C]" />
+					</Link>
 					<button
 						className="md:hidden text-[#08319C] ml-4"
 						onClick={toggleMenu}
@@ -74,12 +81,12 @@ const Navbar: React.FC = () => {
 			{isMenuOpen && (
 				<div
 					ref={menuRef}
-					className="absolute top-16 right-4 bg-white shadow-lg p-4 rounded-lg md:hidden"
+					className="absolute top-16 right-4 bg-white shadow-lg p-4 rounded-lg md:hidden list-none"
 				>
 					{navLinks.map((link: NavLink, index: number) => (
-						<p key={index} className="py-2">
-							{link.name}
-						</p>
+						<Link key={index} href={link.id}>
+							<li className="hover:font-semibold py-2">{link.name}</li>
+						</Link>
 					))}
 				</div>
 			)}
