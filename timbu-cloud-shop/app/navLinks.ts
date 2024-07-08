@@ -1,24 +1,23 @@
 export interface NavLink {
 	name: string;
-	path: string;
+	id: string;
 }
 
 export const navLinks: NavLink[] = [
 	{
 		name: "Products",
-		path: "/products",
+		id: "#products",
 	},
 	{
 		name: "Contact",
-		path: "/products",
+		id: "#contact",
 	},
 	{
-		name: "Affiliate",
-		path: "/products",
+		name: "Categories",
+		id: "#categories",
 	},
 	{
 		name: "Special",
-		path: "/products",
+		id: "#special",
 	},
 ];
-
