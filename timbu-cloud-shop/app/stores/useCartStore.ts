@@ -9,7 +9,6 @@ interface Product {
   color: string;
   model: string;
   SN: string;
-  image: string;
   quantity: number;
 }
 
