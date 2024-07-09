@@ -24,7 +24,7 @@ const OtherProducts: React.FC = () => {
 			color: "Silver",
 			model: "2022",
 			SN: "HTNO-22-11",
-			image: "../../public/air-pods.png",
+			image: AirPods,
 			quantity: 1,
 		},
 		{
@@ -36,7 +36,7 @@ const OtherProducts: React.FC = () => {
 			color: "Silver",
 			model: "2022",
 			SN: "HTNO-22-11",
-			image: "../../public/black-earpods.png",
+			image: BlackPods,
 			quantity: 1,
 		},
 	];
@@ -64,7 +64,7 @@ const OtherProducts: React.FC = () => {
 							className="w-[200px] h-[150px] bg-[#C8D3F0] rounded-lg flex items-center justify-center 
 							md:ml-auto ml-24 md:mt-auto mt-3"
 						>
-							<Image src="" alt={product.name} />
+							<Image src={product.image} alt={product.name} unoptimized  />
 						</div>
 						<div className="flex flex-col justify-center items-center mt-3 -ml-4">
 							<p className="text-[16px] text-[#000000] font-medium text-center">
