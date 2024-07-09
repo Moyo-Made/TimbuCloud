@@ -36,13 +36,15 @@ const Navbar: React.FC = () => {
 	return (
 		<div className="flex justify-around items-center p-4 mt-4">
 			<div className="mr-14">
-				<Image
-					src={Logo}
-					alt="Timbu Cloud Logo"
-					width={150}
-					height={30}
-					property="priority"
-				/>
+				<Link href="/">
+					<Image
+						src={Logo}
+						alt="Timbu Cloud Logo"
+						width={150}
+						height={30}
+						property="priority"
+					/>
+				</Link>
 			</div>
 
 			<div className="flex items-center gap-4">
