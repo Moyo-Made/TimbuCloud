@@ -70,9 +70,24 @@ const Checkout = () => {
 						<div className="mt-5 ml-6">
 							<span className="text-[17px] font-semibold">Payment Methods</span>
 							<div className="flex gap-3 md:gap-10 ml-3 md:ml-6 mt-3">
-								<Image src={CreditCard} alt="Credit card" className="w-[80px] h-[80px]" />
-								<Image src={GiftCard} alt="Gift card" className="w-[80px] h-[80px]" />
-								<Image src={PayPal} alt="PayPal" className="w-[80px] h-[80px]" />
+								<Image
+									src={CreditCard}
+									alt="Credit card"
+									className="w-[80px] h-[80px]"
+									unoptimized
+								/>
+								<Image
+									src={GiftCard}
+									alt="Gift card"
+									className="w-[80px] h-[80px]"
+									unoptimized
+								/>
+								<Image
+									src={PayPal}
+									alt="PayPal"
+									className="w-[80px] h-[80px]"
+									unoptimized
+								/>
 							</div>
 						</div>
 

@@ -58,6 +58,7 @@ const Cart: React.FC = () => {
 								width={200}
 								height={150}
 								className="bg-[#C8D3F0] rounded-md"
+								unoptimized
 							/>
 
 							<div className="grid ml-10 text-[14px]">

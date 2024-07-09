@@ -10,6 +10,7 @@ const Hero: React.FC = () => {
 					src={HeroImage}
 					alt="Hero Image"
 					className="md:w-[1080px] w-[380px]"
+					unoptimized
 				/>
 				<div className="hidden md:block w-[1080px] h-[20px] bg-[#08319C26] mt-3"></div>
 			</div>

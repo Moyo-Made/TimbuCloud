@@ -113,7 +113,7 @@ const Categories = () => {
 					<span className="uppercase text-[15px] text-[#000000] font-medium mt-1">
 						Shop Now!
 					</span>
-					<Image src={BestGadget} alt="Best Gadget Image" />
+					<Image src={BestGadget} alt="Best Gadget Image" unoptimized />
 				</div>
 			</div>
 		</div>

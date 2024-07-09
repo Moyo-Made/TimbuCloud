@@ -12,7 +12,13 @@ const Footer = () => {
 			id="contact"
 		>
 			<div className="mt-7 ml-12">
-				<Image src={FooterLogo} alt="Timbo cloud" width={150} height={30} />
+				<Image
+					src={FooterLogo}
+					alt="Timbo cloud"
+					width={150}
+					height={30}
+					unoptimized
+				/>
 				<div className="hidden md:block mt-5 w-[600px]">
 					<p className="text-[#FFFF] leading-7 ">
 						At Timbu Cloud Shop, we cater to all your gadget needs in one
