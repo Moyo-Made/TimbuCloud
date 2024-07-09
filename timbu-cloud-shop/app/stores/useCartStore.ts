@@ -1,5 +1,5 @@
 import create from "zustand";
-import { StaticImageData } from "next/image";
+
 
 interface Product {
   name: string;
@@ -9,7 +9,7 @@ interface Product {
   color: string;
   model: string;
   SN: string;
-  image: StaticImageData;
+  image: string;
   quantity: number;
 }
 

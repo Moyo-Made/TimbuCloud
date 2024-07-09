@@ -8,7 +8,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCartStore } from "../stores/useCartStore";
 
-
 const OtherProducts: React.FC = () => {
 	const addToCart = useCartStore((state) => state.addToCart);
 	const isInCart = useCartStore((state) => state.isInCart);
@@ -25,7 +24,7 @@ const OtherProducts: React.FC = () => {
 			color: "Silver",
 			model: "2022",
 			SN: "HTNO-22-11",
-			image: AirPods,
+			image: "../../public/air-pods.png",
 			quantity: 1,
 		},
 		{
@@ -37,7 +36,7 @@ const OtherProducts: React.FC = () => {
 			color: "Silver",
 			model: "2022",
 			SN: "HTNO-22-11",
-			image: BlackPods,
+			image: "../../public/black-earpods.png",
 			quantity: 1,
 		},
 	];
@@ -94,7 +93,7 @@ const OtherProducts: React.FC = () => {
 									onClick={() => addToCart(product)}
 								>
 									Add to cart
-								</button>
+								</button>                                                     
 							)}
 						</div>
 					</div>
