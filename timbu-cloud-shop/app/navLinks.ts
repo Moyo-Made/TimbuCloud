@@ -15,9 +15,5 @@ export const navLinks: NavLink[] = [
 	{
 		name: "Categories",
 		id: "#categories",
-	},
-	{
-		name: "Special",
-		id: "#special",
-	},
+	}
 ];
