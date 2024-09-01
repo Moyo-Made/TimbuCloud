@@ -1,4 +1,4 @@
-import create from "zustand";
+import {create} from "zustand";
 import { StaticImageData } from "next/image";
 
 interface Product {

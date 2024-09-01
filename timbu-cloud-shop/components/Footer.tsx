@@ -8,7 +8,7 @@ import Image from "next/image";
 const Footer = () => {
 	return (
 		<div
-			className="flex flex-col md:flex md:flex-row gap-7 md:gap-20 bg-[#08319C] w-[1080px] h-[260px] mt-20 md:ml-32"
+			className="flex flex-col md:flex md:flex-row gap-7 md:gap-20 bg-[#08319C] w-[1080px] h-[260px] mt-20 md:ml-[15rem]"
 			id="contact"
 		>
 			<div className="mt-7 ml-12">
@@ -35,13 +35,13 @@ const Footer = () => {
 					<h2 className="text-[25px] font-semibold">Contact</h2>
 					<div className="list-none leading-7 mt-3">
 						<a href="">
-							<li>@gadget.com</li>
+							<li>@timbucloud.com</li>
 						</a>
 						<a href="">
-							<li>+123 456789</li>
+							<li>+234 807 556 5557</li>
 						</a>
 						<a href="">
-							<li>Anywhere</li>
+							<li>Lagos, Nigeria</li>
 						</a>
 					</div>
 				</div>

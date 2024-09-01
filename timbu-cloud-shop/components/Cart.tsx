@@ -23,12 +23,6 @@ const Cart: React.FC = () => {
 				<h2 className="mt-5 md:text-[25px] text-[20px] text-[#08319C] font-semibold uppercase">
 					My cart
 				</h2>
-				<a
-					href=""
-					className="flex md:hidden text-[#08319C] underline font-semibold mt-[1.4rem]"
-				>
-					<li className="list-none">Update</li>
-				</a>
 			</div>
 			<div className="grid grid-cols-4 mt-6 text-[18px] font-semibold">
 				<div>
@@ -53,12 +47,11 @@ const Cart: React.FC = () => {
 					>
 						<div className="flex items-center ">
 							<Image
-								src={item.image}
+								src={item.image || "../public/iphone.png"}
 								alt={item.name}
 								width={200}
 								height={150}
 								className="bg-[#C8D3F0] rounded-md"
-								unoptimized
 							/>
 
 							<div className="grid ml-10 text-[14px]">
@@ -109,7 +102,7 @@ const Cart: React.FC = () => {
 					</div>
 				))
 			) : (
-				<div className="grid justify-center items-center mt-10 text-[18px] font-medium">
+				<div className="grid justify-center items-center md:-ml-36 mt-10 text-[18px] font-medium">
 					No items in the cart.
 					<div>
 						<Link href="/">

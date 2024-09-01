@@ -20,13 +20,6 @@ const PromocodeInput = () => {
 					</button>
 				</div>
 			</div>
-
-			<div className="hidden md:flex mt-6 md:ml-[30rem]">
-				<button className="bg-[#08319C] text-[16px] text-[#FFFFFF] w-[150px] h-[40px] rounded-md mt-3">
-					Update cart
-				</button>
-				{/* <div className="hidden md:block bg-[#00000080] border w-[20rem] md:w-[63rem] mt-4" /> */}
-			</div>
 		</div>
 	);
 };
