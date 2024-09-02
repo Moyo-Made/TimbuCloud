@@ -16,6 +16,7 @@ const OtherProducts: React.FC = () => {
 
 	const products = [
 		{
+			id: 1,
 			name: "Airpods Pro",
 			originalPrice: 420,
 			discountedPrice: 400,
@@ -28,6 +29,7 @@ const OtherProducts: React.FC = () => {
 			quantity: 1,
 		},
 		{
+			id: 2,
 			name: "Black Wireless Pods",
 			originalPrice: 180,
 			discountedPrice: 200,
@@ -81,7 +83,7 @@ const OtherProducts: React.FC = () => {
 								height={18}
 							/>
 
-							{isInCart(product.name) ? (
+							{isInCart(product.id) ? (
 								<Link href="/cart">
 									<button className="bg-[#08319C] text-[15px] text-[#FFFFFF] w-[130px] h-[40px] rounded-md mt-5 uppercase flex justify-center items-center">
 										See in cart
