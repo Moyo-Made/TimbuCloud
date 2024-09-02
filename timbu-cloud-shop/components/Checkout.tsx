@@ -11,8 +11,18 @@ import Link from "next/link";
 import { useCartStore } from "../stores/useCartStore";
 
 const Checkout = () => {
+	const [showPopup, setShowPopup] = useState(false);
 	const cart = useCartStore((state) => state.cart);
 	const [shippingOption, setShippingOption] = useState<"flat" | "free">("free");
+
+	const handlePurchaseClick = () => {
+		setShowPopup(true);
+
+		// Automatically close the popup after 2 seconds
+		setTimeout(() => {
+			setShowPopup(false);
+		}, 2000);
+	};
 
 	// Calculate the subtotal
 	const subtotal = cart.reduce(
@@ -209,10 +219,36 @@ const Checkout = () => {
 					</div>
 					<div className="grid justify-center items-center mt-4 ">
 						<Link href="/checkout">
-							<button className="bg-[#08319C] text-[15px] text-[#FFFFFF] w-[250px] h-[40px] rounded-md mt-3">
+							<button
+								onClick={handlePurchaseClick}
+								className="bg-[#08319C] text-[15px] text-[#FFFFFF] w-[250px] h-[40px] rounded-md mt-3"
+							>
 								Complete Purchase
 							</button>
 						</Link>
+						{showPopup && (
+							<div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
+								<div className="bg-white p-8 rounded-lg shadow-lg flex flex-col items-center">
+									<div className="checkmark-container mb-4">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											className="h-12 w-12 text-green-500"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke="currentColor"
+											strokeWidth={2}
+										>
+											<path
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												d="M5 13l4 4L19 7"
+											/>
+										</svg>
+									</div>
+									<p className="text-lg font-semibold">Purchase Successful</p>
+								</div>
+							</div>
+						)}
 						<Link
 							href="/cart"
 							className="text-[14px] underline mt-2 text-center"
