@@ -3,6 +3,7 @@ import { StaticImageData } from "next/image";
 
 interface Product {
   name: string;
+  id: number;
   originalPrice: number;
   discountedPrice: number;
   description: string;
@@ -18,7 +19,7 @@ interface CartState {
   addToCart: (product: Product) => void;
   removeFromCart: (index: number) => void;
   updateQuantity: (index: number, newQuantity: number) => void;
-  isInCart: (productName: string) => boolean; // Corrected return type for isInCart
+  isInCart: (productId: number) => boolean; // Corrected return type for isInCart
 }
 
 export const useCartStore = create<CartState>((set, get) => ({
@@ -37,8 +38,8 @@ export const useCartStore = create<CartState>((set, get) => ({
         i === index ? { ...item, quantity: newQuantity } : item
       ),
     })),
-    isInCart: (productName) => {
+    isInCart: (productId) => {
       const { cart } = get();
-      return cart.some((item) => item.name === productName);
+      return cart.some((item) => item.id === productId);
     }, 
 }));
