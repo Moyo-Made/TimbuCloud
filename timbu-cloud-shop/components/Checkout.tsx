@@ -84,19 +84,16 @@ const Checkout = () => {
 									src={CreditCard}
 									alt="Credit card"
 									className="w-[80px] h-[80px]"
-									unoptimized
 								/>
 								<Image
 									src={GiftCard}
 									alt="Gift card"
 									className="w-[80px] h-[80px]"
-									unoptimized
 								/>
 								<Image
 									src={PayPal}
 									alt="PayPal"
 									className="w-[80px] h-[80px]"
-									unoptimized
 								/>
 							</div>
 						</div>
