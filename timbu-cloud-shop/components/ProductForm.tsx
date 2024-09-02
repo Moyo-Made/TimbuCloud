@@ -3,6 +3,8 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { Product } from "../types/Product";
 import { getProducts, saveProducts } from "../utils/storage";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 
 type ImageData = {
 	src: string;
@@ -102,7 +104,16 @@ const ProductForm: React.FC = () => {
 
 	return (
 		<form onSubmit={handleSubmit} className="container mx-auto p-4">
-			<h1 className="text-2xl font-bold mb-4">Add New Product</h1>
+			<div className="flex gap-10">
+				<div>
+					<Link href="/">
+						<ArrowLeft size={24} />
+					</Link>
+				</div>
+				<div>
+					<h1 className="text-2xl font-bold mb-4">Add New Product</h1>
+				</div>
+			</div>
 
 			{/* Product Name */}
 			<div className="mb-4">
