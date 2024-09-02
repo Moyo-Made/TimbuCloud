@@ -16,7 +16,7 @@ const NewProductPage: React.FC = () => {
     router.push("/");
   };
 
-  return <ProductForm addNewProduct={handleAddNewProduct} />;
+  return <ProductForm />;
 };
 
 export default NewProductPage;
