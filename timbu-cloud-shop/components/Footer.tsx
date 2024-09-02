@@ -17,7 +17,6 @@ const Footer = () => {
 					alt="Timbo cloud"
 					width={150}
 					height={30}
-					unoptimized
 				/>
 				<div className="hidden md:block mt-5 w-[600px]">
 					<p className="text-[#FFFF] leading-7 ">
