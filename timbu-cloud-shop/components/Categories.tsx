@@ -1,5 +1,5 @@
 import React from "react";
-import BestGadget from "@/public/best-gadget.png";
+import BestGadget from "../public/best-gadget.png";
 import Image from "next/image";
 
 const Categories = () => {
@@ -13,7 +13,7 @@ const Categories = () => {
 					<span className="uppercase text-[15px] text-[#000000] font-medium mt-1">
 						Shop Now!
 					</span>
-					<Image src={BestGadget} alt="Best Gadget Image" unoptimized />
+					<Image src={BestGadget} alt="Best Gadget Image" />
 				</div>
 			</div>
 		</div>
