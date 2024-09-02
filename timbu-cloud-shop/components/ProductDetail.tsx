@@ -154,7 +154,7 @@ const ProductDetail: React.FC = () => {
               </button>
             ) : (
               <>
-                {isInCart(product.name) ? (
+                {isInCart(product.id) ? (
                   <Link href="/cart">
                     <button className="bg-[#08319C] text-white px-6 py-2 rounded-md uppercase">
                       View in Cart
