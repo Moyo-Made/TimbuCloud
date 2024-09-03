@@ -1,3 +1,4 @@
+
 import { Product } from "@/types/Product";
 
 const STORAGE_KEY = "ecommerce_products";
