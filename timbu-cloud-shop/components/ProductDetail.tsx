@@ -92,7 +92,7 @@ const ProductDetail: React.FC = () => {
       <div className="grid md:grid-cols-2 gap-8">
         <div className="bg-[#C8D3F0] rounded-lg flex items-center justify-center p-4">
           <Image
-            src={product.image.src || ""}
+            src={product.image.src || "/air-pods.png"}
             alt={product.name}
             width={400}
             height={300}
