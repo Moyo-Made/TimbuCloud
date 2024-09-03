@@ -1,10 +1,9 @@
-import ProductDetail from '@/components/ProductDetail'
-import React from 'react'
+import ProductDetail from "@/components/ProductDetail";
 
-const page = () => {
+export default async function ProductPage({ params }: { params: { id: string } }) {
   return (
-	<div><ProductDetail /></div>
-  )
+    <div>
+      <ProductDetail />
+    </div>
+  );
 }
-
-export default page
