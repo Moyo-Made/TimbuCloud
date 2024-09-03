@@ -1,15 +1,15 @@
 'use client';
+'use client';
 
 import React, { useEffect, useState } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { getProductById, updateProduct, deleteProduct } from '../utils/storage';
 import { Product } from '../types/Product';
 import { useCartStore } from '../stores/useCartStore';
 import Link from 'next/link';
 
-const ProductDetail: React.FC = () => {
-  const params = useParams();
+const ProductDetail: React.FC<{ id: string }> = ({ id }) => {
   const router = useRouter();
   const [product, setProduct] = useState<Product | null>(null);
   const [editedProduct, setEditedProduct] = useState<Product | null>(null);
@@ -20,15 +20,13 @@ const ProductDetail: React.FC = () => {
 
   useEffect(() => {
     const fetchProduct = async () => {
-      if (params.id) {
-        const fetchedProduct = getProductById(Number(params.id));
-        setProduct(fetchedProduct);
-        setEditedProduct(fetchedProduct);
-      }
+      const fetchedProduct = getProductById(Number(id));
+      setProduct(fetchedProduct);
+      setEditedProduct(fetchedProduct);
     };
 
     fetchProduct();
-  }, [params.id]);
+  }, [id]);
 
   const handleEdit = () => {
     setIsEditing(true);
