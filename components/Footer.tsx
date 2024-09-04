@@ -1,14 +1,11 @@
 import React from "react";
 import FooterLogo from "@/public/footer-logo.png";
-import Facebook from "@/public/facebook.png";
-import LinkedIn from "@/public/linkedin.png";
-import Instagram from "@/public/instagram.png";
 import Image from "next/image";
 
 const Footer = () => {
 	return (
 		<div
-			className="flex flex-col md:flex md:flex-row gap-7 md:gap-20 bg-[#08319C] w-[1080px] h-[260px] mt-20 md:ml-[15rem]"
+			className="flex flex-col md:flex md:flex-row gap-7 md:gap-20 bg-[#08319C] w-[1080px] h-[260px] mt-20 md:ml-[10rem]"
 			id="contact"
 		>
 			<div className="mt-7 ml-12">
